@@ -13,12 +13,13 @@ namespace HotelProject.DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("data source=LENOVO\\SQLEXPRESS01; initial catalog=HotelReservationProjectDb; Integrated Security=true;");
+            optionsBuilder.UseSqlServer("Data Source=LENOVO\\SQLEXPRESS01;Initial Catalog=HotelReservationProjectDb;User Id=sa;Password=12345;");
         }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Service> services { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Subscribe> subscribes { get; set; }
         public DbSet<Testimonial> testimonials { get; set; }
+        public DbSet<About> Abouts { get; set; }
     }
 }
